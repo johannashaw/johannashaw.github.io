@@ -1,4 +1,10 @@
+/* Font Imports*/
 
+/* blockier font*/
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Sigmar&display=swap');
+/* bubbly font*/
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Indie+Flower&display=swap');
+  
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -13,29 +19,47 @@
 
 @media (prefers-color-scheme: light) {
   body {
-    --main-back:rgb(165, 233, 233);  /*rgb(220, 244, 240); */
+    /*
+    --main-back:rgb(165, 233, 233);  rgb(220, 244, 240); 
     --secondary: rgb(37, 221, 226);
-    --compliment: rgb(243, 89, 184); 
-    --contrast-smol: rgb(20, 75, 186); 
-    --contrast-big: rgb(7, 42, 82); 
+    --compliment: rgb(243, 89, 184); *//*
+    --contrast-smol: rgb(2, 69, 121);    rgb(20, 75, 186);  
+    --contrast-big: rgb(7, 42, 82); */
 
 
-
-/* 
     --main-back: #FDF4F5;
     --secondary: #E8A0BF;
     --compliment: #a6e0ff;  
     --contrast-smol: #936b9e;
-    --contrast-big: #422b49; */
+    --contrast-big: #422b49;
   }
+}
+
+:root{
+  /* blocky font: */
+  /* --title-font: 'Sigmar', cursive;
+  --general-font: 'Cherry Cream Soda', cursive;
+  font-size: 20px; */
+
+  /* bubbly font: */
+  /* --title-font: 'Cherry Bomb One', cursive;
+  --general-font: 'Indie Flower', cursive;
+  font-size: 20px; */
+
+  /* mix font  */  
+  --title-font: 'Cherry Bomb One', cursive;
+  --general-font: 'Cherry Cream Soda', cursive;
+  font-size: 14px;
 }
 
 
 body{
   background-color: var(--main-back);
   color: var(--contrast-big);
-  font-size: larger;
+  font-family: var(--general-font);
+  
 }
+
 
 #heading, h1{  
   background-color: var(--secondary);
@@ -59,6 +83,8 @@ h1{
   margin-left: auto;
   margin-right: auto;
   color: var(--contrast-smol);
+  font-family: var(--title-font);
+  /* font-size: 70px; */
 }
 
 main  {
@@ -75,6 +101,8 @@ main > * > div {
 
 h2{
   color: var(--contrast-smol);
+  font-family: var(--title-font);
+  /* font-size: 40px; */
 
 }
 
@@ -92,24 +120,17 @@ aside > div{
   --bs-navbar-toggler-border-color: rgba(var(--contrast-big), 0.1);
 }
 
-@media  screen and (min-width: 550px) and (max-width: 1000px) {
-  main  {
-  display: grid;
-  grid-template-columns: auto 200px; /*repeat(2, 1fr) ;*/
-  column-gap: 5%;
+
+.centre{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  
 }
 
-
-
-}
-
-@media  screen and (min-width: 1000px) {
-    main  {
-    display: grid;
-    grid-template-columns: 3fr 1fr; /*repeat(2, 1fr) ;*/
-    column-gap: 5%;
+/* 
+@media  screen and (min-width: 550px) {
+  :root{
+    font-size: 12px;
   }
-
-
-
-}
+}  */

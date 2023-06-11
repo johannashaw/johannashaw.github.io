@@ -5,30 +5,32 @@ img{
   border: 2px solid var(--compliment);
   border-radius: 5px;
   width: 100%;
+  max-width: 300px;
+}
+
+figure{
+  margin: 0px;
 }
 
 
 
 @media  screen and (min-width: 550px) and (max-width: 1000px) {
   main  {
-  display: grid;
   grid-template-columns: auto 200px; /*repeat(2, 1fr) ;*/
-  column-gap: 5%;
 }
 }
 
 @media  screen and (min-width: 1000px) {
     main  {
-    display: grid;
     grid-template-columns: 3fr 1fr; /*repeat(2, 1fr) ;*/
-    column-gap: 5%;
   }
 }
 
 @media  screen and (min-width: 550px) {
-  main{
-    
+  main{    
+    display: grid;
     grid-template-rows:  min-content auto;
+    column-gap: 5%;
   }
   section{
     grid-row: 1 / 3;
