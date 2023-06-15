@@ -87,13 +87,13 @@ h1{
   /* font-size: 70px; */
 }
 
-main  {
+.default-grid {
   display: grid;
   padding: 5vh 5% ;
   row-gap: 3vh;
 }
 
-main > * > div {
+.default-grid > * > div {
   padding: 10px;
   border: 2px solid var(--compliment);
   border-radius: 5px;

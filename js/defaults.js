@@ -36,7 +36,7 @@ function AddIncludes()
   styleSh = CreateEl("link", [["rel", "stylesheet"], ["href", "css/main_style.css"]]);
   head.append(styleSh);
 
-  console.log(styleSh);
+  // console.log(styleSh);
 
   // Adds the stylesheet that's specific to the current page
   styleSh = $(CreateEl("link")).attr("rel", "stylesheet").attr("href", "css/" + pagename + ".css");

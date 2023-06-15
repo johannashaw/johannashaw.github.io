@@ -7,7 +7,7 @@ Description: Procedurally incluses the
 
 // set pagename to the name of the html page (excluding ".html"), to be used for future includes
 let pagename = document.URL.split("/");
-pagename = pagename[pagename.length -1].replace(".html", "");
+pagename = pagename[pagename.length -1].replace(".html", "").replace("#","");
 
 
 // inclused jQuery, bootstrap's js
