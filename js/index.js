@@ -48,9 +48,11 @@ $( () => {
 function MakeThemASquare(){
   $(".square").each( (indev, elem) => {
     $(elem).css("padding-bottom", "0px");
-    max = Math.max($(elem).height(), $(elem).width() );
 
-    $(elem).height( max ).width( max);
+    // max = Math.max($(elem).height(), $(elem).width() );
+    // $(elem).height( max ).width( max);
+
+    $(elem).height( $(elem).width());
   });
   
 }

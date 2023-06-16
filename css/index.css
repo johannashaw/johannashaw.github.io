@@ -1,3 +1,64 @@
+
+/* For some reason it wouldn't let me use vars in the rgba funcs, 
+  so in the mean time we're just doing it manually */
+
+@media (prefers-color-scheme: dark) {
+  .square{
+    box-shadow: inset 0 0 0 1000px rgba(46, 79, 79, 0.5);
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
+  .square{
+    box-shadow: inset 0 0 0 1000px rgba(232, 161, 192, 0.7);
+  } 
+}
+
+
+#intro{
+  background-image: linear-gradient(var(--secondary) 20%, var(--main-back));
+}
+#intro > h1{
+  font-size: calc(1em + 6vw);
+  text-align: center;
+  margin: 0 auto ;  /* 5% auto; */
+  padding: 8% 3% 3%;
+}
+
+#intro > div{
+  display: grid;
+  grid-template-columns: repeat(2, auto) ;
+  justify-content: center;
+  padding-bottom: 2vh;
+  margin-left: 2%;
+  margin-right: 2%;
+  column-gap: 2%;
+}
+
+#intro > div > h3{
+  align-self: center;
+  justify-self: right;
+  font-size: calc(1em + 1.5vw);
+  /* padding-left: 10px; */
+}
+#intro > div > ul{
+  font-size: calc(0.7em + 1vw);
+  margin-bottom: 0px;
+  list-style-type: 'º  ';
+  padding-left: 10%;
+  /* width: fit-content; */
+  /* list-style-type: '🡆 '; */
+}
+#intro > div > ul > li{
+  margin: 0;
+  padding: 0;
+  /* width: fit-content; */
+  padding-bottom: 0.5vh;
+
+}
+
+
 .link-Grid{
   display: grid;
   width: 100%;
@@ -12,37 +73,47 @@
   height: 0;
   padding: 0px 0px 100% 0px;
   /* padding-bottom: 100%; */
+  border-radius: calc(10px + 1.5vw);
 }
+
+a.square{
+  text-decoration: none;  
+  text-align: center;
+}
+
+
+#projects{
+  
+}
+
 
 #about-me{
   background-image: url("https://lh3.googleusercontent.com/pw/AJFCJaUB067OaKVhYqYug54hXLyh0cCCdz8J2WF2O9vkK1Zepy92EznGwTo88NwGqQDYyCesEptJizWgUKOCMGPJ3YPEGs9rEPr60qO7tpqy0gijBaiUFBMk1fjZfxVHO1GEnHLLmUbP7FulM4-Hqfal8RlN=w953-h953-s-no?authuser=0");
-  background-color: rgba(var(--secondary), 0.7); 
+  /* box-shadow: inset 0 0 0 1000px rgba(var(--maybe), 0.5); */
   background-repeat: no-repeat;
   background-size: 100%;
-
+}
+.square > div {
+  padding: calc(10px + 1.5vw);
 }
 
 
-.intro{
-
-}
-
-
-
-@media  screen and (min-width: 550px) and (max-width: 1000px) {
-  .link-Grid  {
-  grid-template-columns: repeat(2, 1fr) ;
-}
-}
-
-@media  screen and (min-width: 1000px) {
-  .link-Grid  {  
+/* @media  screen and (min-width: 550px) and (max-width: 1000px) {
+    .link-Grid  {
     grid-template-columns: repeat(2, 1fr) ;
   }
 }
 
+@media  screen and (min-width: 1000px) {
+  .link-Grid  {  
+    grid-template-columns: repeat(4, 1fr) ;
+  }
+} */
+
 @media  screen and (min-width: 550px) {
   .link-Grid{    
+    
+    grid-template-columns: repeat(2, 1fr) ;
     display: grid;
     column-gap: 5%;
   }
@@ -55,5 +126,17 @@
     grid-column: 2;
   }
 
+  /* #intro > div{
+    display: grid;
+    justify-content: center;
+    padding-bottom: 2vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    column-gap: 2%;
+  } */
+  
+  #intro > div > ul{
+    width: max-content;
+  }
 
 }
