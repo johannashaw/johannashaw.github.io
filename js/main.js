@@ -9,7 +9,7 @@ Description: Procedurally incluses the JavaScript files and css pages. To be inc
 // set pagename to the name of the html page (excluding ".html"), to be used for future includes
 let pagename = document.URL.split("/");
 pagename = pagename[pagename.length -1].replace(".html", "").replace("#","");
-console.log(pagename);
+console.log("page name : " + pagename);
 
 
 // inclused jQuery, bootstrap's js
