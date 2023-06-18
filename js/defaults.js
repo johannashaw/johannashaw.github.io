@@ -1,3 +1,11 @@
+/* 
+Created by: Johanna Shaw
+Date: June 1st, 2023
+Description: Procedurally incluses the css pages. To be included, each dependant page
+             needs to have the same base name as it's html counterpart.
+
+*/
+
 let sites = ["About Me"];
 let darkTheme = false;
 

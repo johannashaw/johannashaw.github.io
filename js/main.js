@@ -1,7 +1,8 @@
 /* 
 Created by: Johanna Shaw
 Date: May 25, 2023
-Description: Procedurally incluses the 
+Description: Procedurally incluses the JavaScript files and css pages. To be included, 
+             each dependant page needs to have the same base name as it's html counterpart.
 
 */
 

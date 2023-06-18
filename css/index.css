@@ -12,12 +12,17 @@
 @media (prefers-color-scheme: light) {
   .square{
     box-shadow: inset 0 0 0 1000px rgba(232, 161, 192, 0.7);
+    /* box-shadow: inset 0 0 0 1000px color-mix(in srgb, var(--secondary) 70%, transparent); */
   } 
 }
 
 
 #intro{
-  background-image: linear-gradient(var(--secondary) 20%, var(--main-back));
+  /* 
+  --thing: rgb(255, 0, 0);
+  background-color: color-mix(in srgb, var(--thing) 20%, transparent);*/
+  
+  /* background-image: linear-gradient(var(--secondary) 20%, var(--main-back)); */
 }
 #intro > h1{
   font-size: calc(1em + 6vw);
@@ -64,6 +69,7 @@
   width: 100%;
   padding: 5%;
   row-gap: 3vh;
+  justify-items: center;
 }
 
 
@@ -71,9 +77,12 @@
 .square {
   width: 100%;
   height: 0;
-  padding: 0px 0px 100% 0px;
+  padding: 0px 0px 98% 0px;
   /* padding-bottom: 100%; */
+  border: 3px solid var(--compliment);
   border-radius: calc(10px + 1.5vw);
+  
+  /* box-shadow: inset 0 0 0 1000px color-mix(in srgb, var(--secondary) 70%, transparent); */
 }
 
 a.square{
@@ -140,3 +149,34 @@ a.square{
   }
 
 }
+
+
+
+/* Okay I'm not adding this yet, but badic settup for button blur on hover
+  Source:
+    https://codepen.io/caesura/pen/RrWQKX */
+/* 
+
+  &#btn-1 {
+    &:before {
+      transition: all 0.3s ease;
+    }
+
+    &:hover:before {
+      -webkit-filter: blur($blur);
+      filter: blur($blur);
+    }
+  }
+  
+  &#btn-2 {
+    &:before {
+      transition: all 0.3s ease;
+      -webkit-filter: blur($blur);
+      filter: blur($blur);
+    }
+
+    &:hover:before {
+      -webkit-filter: blur(0);
+      filter: blur(0);
+    }
+  } */

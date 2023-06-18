@@ -9,8 +9,9 @@
 @media (prefers-color-scheme: dark) {
   body {
     --main-back: #2C3333;
-    --secondary: #2E4F4F;
-    --compliment: #00f7ff;
+    --secondary: rgb(46, 79, 79);
+    --compliment: #d9a300;
+    /* --compliment: #00f7ff; */
     --contrast-smol: #8dd4c2;
     --contrast-big: #e6f8f4;
   }
@@ -19,19 +20,21 @@
 
 @media (prefers-color-scheme: light) {
   body {
-    /*
-    --main-back:rgb(165, 233, 233);  rgb(220, 244, 240); 
+    
+    /* --main-back:rgb(165, 233, 233);   
+    --main-back:rgb(220, 244, 240); 
     --secondary: rgb(37, 221, 226);
-    --compliment: rgb(243, 89, 184); *//*
-    --contrast-smol: rgb(2, 69, 121);    rgb(20, 75, 186);  
+    --compliment: rgb(243, 89, 184);
+    --contrast-smol: rgb(2, 69, 121);    
     --contrast-big: rgb(7, 42, 82); */
 
 
     --main-back: #FDF4F5;
-    --secondary: hsl(334, 61%, 77%);
+    --secondary: rgb(255, 194, 220);
+    /* --secondary: rgb(232, 161, 192); */
     --compliment: #a6e0ff;  
     --contrast-smol: #936b9e;
-    --contrast-big: rgb(66, 43, 73);
+    --contrast-big: rgb(66, 43, 73); /* */
   }
 }
 
@@ -50,19 +53,26 @@
   --title-font: 'Cherry Bomb One', cursive;
   --general-font: 'Cherry Cream Soda', cursive;
   font-size: 14px;
+
+
+  
+
 }
 
 
 body{
-  background-color: var(--main-back);
+  /* background-color: var(--main-back); */
   color: var(--contrast-big);
   font-family: var(--general-font);
   
+  background-image: linear-gradient(var(--secondary) 30%, var(--main-back));
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
 }
 
 
 #heading{    
-  background-image: linear-gradient(var(--secondary) 30%, var(--main-back));
+  /* background-image: linear-gradient(var(--secondary) 30%, var(--main-back)); */
   /* background-color: var(--secondary); */
   color: var(--contrast-big);
   align-items: center;
