@@ -1,0 +1,25 @@
+
+
+
+@media (prefers-color-scheme: dark) {
+  /* #li-pic{
+    content: url(..\images\linkedin_dark.png);
+  } */
+}
+
+
+@media (prefers-color-scheme: light) {
+  
+  #li-pic{
+    background-image: url(..\images\linkedin_light.png);
+  }
+}
+
+img{
+  width:100%;
+}
+
+main{
+  display: grid;
+  
+}

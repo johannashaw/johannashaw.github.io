@@ -10,9 +10,9 @@
   body {
     --main-back: #2C3333;
     --secondary: rgb(46, 79, 79);
-    --compliment: #d9a300;
-    /* --compliment: #00f7ff; */
-    --contrast-smol: #8dd4c2;
+    /* --compliment: #d9a300; */
+    --compliment: #00f7ff;
+    --contrast-smol: rgb(141, 212, 194);
     --contrast-big: #e6f8f4;
   }
 }
@@ -33,7 +33,7 @@
     --secondary: rgb(255, 194, 220);
     /* --secondary: rgb(232, 161, 192); */
     --compliment: #a6e0ff;  
-    --contrast-smol: #936b9e;
+    --contrast-smol: rgb(147, 107, 158);
     --contrast-big: rgb(66, 43, 73); /* */
   }
 }
@@ -130,13 +130,13 @@ aside > div{
 }
 
 .navbar-light{
-  --bs-navbar-color: rgba(var(--contrast-big), 0.55);
-  --bs-navbar-hover-color: rgba(var(--contrast-big), 0.75);
-  --bs-navbar-disabled-color: rgba(var(--contrast-big), 0.25);
+  --bs-navbar-color: color-mix(in srgb, var(--contrast-big) 55%, transparent);
+  --bs-navbar-hover-color: color-mix(in srgb, var(--contrast-big) 75%, transparent);
+  --bs-navbar-disabled-color: color-mix(in srgb, var(--contrast-big) 25%, transparent);
   --bs-navbar-active-color: var(--contrast-big);
   --bs-navbar-brand-color: var(--contrast-big);
   --bs-navbar-brand-hover-color: var(--contrast-big);
-  --bs-navbar-toggler-border-color: rgba(var(--contrast-big), 0.1);
+  --bs-navbar-toggler-border-color: color-mix(in srgb, var(--contrast-big) 10%, transparent);
 }
 
 
