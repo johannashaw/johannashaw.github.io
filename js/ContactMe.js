@@ -18,3 +18,8 @@ function SetImgs()
   $("#gh-pic").prop("src", "images\\github_" + theme +".png");
   //images\github_light.png
 }
+
+
+
+// for copying to clipboard:
+//  https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
