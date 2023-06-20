@@ -10,6 +10,10 @@ Description: Procedurally incluses the JavaScript files and css pages. To be inc
 let pagename = document.URL.split("/");
 pagename = pagename[pagename.length -1].replace(".html", "").replace("#","");
 console.log("page name : " + pagename);
+if (pagename == "")
+{
+  pagename = "index";
+}
 
 
 // inclused jQuery, bootstrap's js
