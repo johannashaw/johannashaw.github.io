@@ -15,12 +15,33 @@
  
  </head>
  <body>
+
+  <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+    Email <strong>copied!</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Failed</strong> to copy email
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
  
    <div id="heading"></div>
  
    <main>
 
-    <section><h2 id="email">johannamjshaw@gmail.com</h2></section>
+    <section>
+      <div id="email" class="bi bi-clipboard" title="Click to copy">
+        
+        <div>
+          <h3 id="email-addr">johannamjshaw@gmail.com</h3>
+        </div>
+      </div>
+    </section>
     
     <!-- Open links in a new tab  -->
     <section>

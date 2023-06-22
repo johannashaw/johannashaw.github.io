@@ -1,4 +1,10 @@
 
+:root{
+  --lgrid-padding: 5vw;
+  
+}
+
+
 /* For some reason it wouldn't let me use vars in the rgba funcs, 
   so in the mean time we're just doing it manually */
 
@@ -67,7 +73,7 @@
 .link-Grid{
   display: grid;
   width: 100%;
-  padding: 5%;
+  padding: var(--lgrid-padding);
   row-gap: 3vh;
   justify-items: center;
 }
@@ -75,6 +81,7 @@
 
   /* source:    https://tylerduprey-52451.medium.com/a-perfect-square-with-css-964499440998  */
 .square {
+  /* width: 100%; */
   width: 100%;
   height: 0;
   padding: 0px 0px 98% 0px;
@@ -88,20 +95,25 @@
 a.square{
   text-decoration: none;  
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-
-#projects{
-  
-}
 
 
 #about-me{
   background-image: url("https://lh3.googleusercontent.com/pw/AJFCJaUB067OaKVhYqYug54hXLyh0cCCdz8J2WF2O9vkK1Zepy92EznGwTo88NwGqQDYyCesEptJizWgUKOCMGPJ3YPEGs9rEPr60qO7tpqy0gijBaiUFBMk1fjZfxVHO1GEnHLLmUbP7FulM4-Hqfal8RlN=w953-h953-s-no?authuser=0");
   /* box-shadow: inset 0 0 0 1000px rgba(var(--maybe), 0.5); */
-  background-repeat: no-repeat;
-  background-size: 100%;
 }
+
+#projects{
+  
+}
+
+#contact-me{
+  background-image: url(../images/contactme.png);
+}
+
 .square > div {
   padding: calc(10px + 1.5vw);
 }
@@ -123,8 +135,7 @@ a.square{
   .link-Grid{    
     
     grid-template-columns: repeat(2, 1fr) ;
-    display: grid;
-    column-gap: 5%;
+    column-gap: var(--lgrid-padding);
   }
   section{
     grid-row: 1 / 4;

@@ -3,8 +3,38 @@
 $( () => {
   SetImgs();
 
+  $("#email").on( "mouseenter", () => {
+    //fade in email address
+    $("#email-addr").fadeIn(300);
+
+  } ).on( "mouseleave", () => {
+    //fade in email address
+    $("#email-addr").fadeOut(300);
+  });
+  
+  $("#email").on("click", () => {
+    //copy email address to clipboard 
+    navigator.clipboard.writeText($("#email-addr").html()).then(DisplayCoppied, DisplayError);
+
+  });
+  
+  $(".close").on("click", () => {
+    $(".alert").alert('close');
+  });
+
 });
 
+function DisplayCoppied()
+{
+    alert("Copied");
+  $('.alert-secondary').alert();
+}
+
+function DisplayError()
+{
+  alert("Nope");
+  $('.alert-warning').alert();
+}
 
 // sets the Image sources so that the colour corresponds with the current theme
 function SetImgs()
@@ -12,6 +42,9 @@ function SetImgs()
   let theme = "light";
   if (window.matchMedia("(prefers-color-scheme: dark)").matches)
     theme = "dark";
+
+  
+  // $("#email").css("background-image", "url(../images/email_" + theme +".png)");  
 
   // set the image source for the linkedin photo and the github photo
   $("#li-pic").prop("src", "images\\linkedin_" + theme +".png");  
