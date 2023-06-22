@@ -10,7 +10,7 @@
     content: url(..\images\linkedin_dark.png);
   } */
   #email{
-    background-image: url(..\images\email_dark.png);
+    background-image: url(../images/email_dark.png);
     }
   
 }
