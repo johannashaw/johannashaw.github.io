@@ -44,15 +44,27 @@ $( () => {
 
 // window.onload = MakeThemASquare();
 
-
-function MakeThemASquare(){
+// Adjusts the height of each element of the 'square' class
+async function MakeThemASquare(){
   $(".square").each( (indev, elem) => {
+
+    $(elem).height($(elem).width());
     $(elem).css("padding-bottom", "0px");
 
-    // max = Math.max($(elem).height(), $(elem).width() );
-    // $(elem).height( max ).width( max);
+    //This callback is used to account for a bug that doubles the square height
+    setTimeout(() => {
+      $(elem).height($(elem).width());
+    }, 300);
 
-    $(elem).height( $(elem).width());
   });
   
+}
+
+
+// Used in asynchronous functions.
+//  Source:   https://alvarotrigo.com/blog/wait-1-second-javascript/
+function delay(milliseconds){
+  return new Promise(resolve => {
+      setTimeout(resolve, milliseconds);
+  });
 }
