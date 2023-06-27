@@ -53,7 +53,6 @@
 }
 
 #intro > div > h3{
-  align-self: center;
   justify-self: right;
   font-size: calc(1em + 1.5vw);
   /* padding-left: 10px; */
