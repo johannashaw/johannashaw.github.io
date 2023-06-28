@@ -1,10 +1,10 @@
 /* Font Imports*/
 
-/* blockier font*/
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Sigmar&display=swap');
-/* bubbly font*/
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Indie+Flower&display=swap');
-  
+  /* blockier font*/
+  @import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Sigmar&display=swap');
+  /* bubbly font*/
+  @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Indie+Flower&display=swap');
+    
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -20,15 +20,6 @@
 
 @media (prefers-color-scheme: light) {
   body {
-    
-    /* --main-back:rgb(165, 233, 233);   
-    --main-back:rgb(220, 244, 240); 
-    --secondary: rgb(37, 221, 226);
-    --compliment: rgb(243, 89, 184);
-    --contrast-smol: rgb(2, 69, 121);    
-    --contrast-big: rgb(7, 42, 82); */
-
-
     --main-back: #FDF4F5;
     --secondary: rgb(255, 194, 220);
     /* --secondary: rgb(232, 161, 192); */
@@ -61,7 +52,7 @@
 
 
 body{
-  /* background-color: var(--main-back); */
+  background-color: var(--main-back);
   color: var(--contrast-big);
   font-family: var(--general-font);
   

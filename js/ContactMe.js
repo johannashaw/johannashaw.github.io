@@ -5,11 +5,13 @@ $( () => {
 
   $("#email").on( "mouseenter", () => {
     //fade in email address
-    $("#email-addr").fadeIn(300);
+    if ($("#email-addr").css('display') == 'none')
+      $("#email-addr").fadeIn(150);
 
   } ).on( "mouseleave", () => {
     //fade in email address
-    $("#email-addr").fadeOut(300);
+    if ($("#email-addr").css('display') != 'none')
+      $("#email-addr").fadeOut(150);
   });
   
   $("#email").on("click", () => {
