@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 
 // process get request
 if (isset($_GET['action']))
