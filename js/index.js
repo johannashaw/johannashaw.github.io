@@ -1,42 +1,46 @@
+/* 
+Created by: Johanna Shaw
+Date: June 1st, 2023
+Description: Removes the default heading and 
 
-console.log(pagename + " in index.js")
+*/
 
 $( () => {
 
   //hide the heading
-  $("#heading").prop("hidden", true);
+  // $("#heading").prop("hidden", true);
   $("#heading").remove();
 
   
   // document.addEventListener("load", MakeThemASquare);
   // $(window).on("load", MakeThemASquare);
 
-  document.addEventListener('readystatechange', event => {
-    switch (document.readyState) {
-      case "loading":
-        console.log("document.readyState: ", document.readyState,
-         `- The document is still loading.`
-         );
-        break;
-      case "interactive":
-        console.log("document.readyState: ", document.readyState, 
-          `- The document has finished loading DOM. `,
-          `- "DOMContentLoaded" event`
-          );
-        break;
-      case "complete":
-        console.log("document.readyState: ", document.readyState, 
-          `- The page DOM with Sub-resources are now fully loaded. `,
-          `- "load" event`
-          );
-        break;
-    }
-  });
+  // document.addEventListener('readystatechange', event => {
+  //   switch (document.readyState) {
+  //     case "loading":
+  //       console.log("document.readyState: ", document.readyState,
+  //        `- The document is still loading.`
+  //        );
+  //       break;
+  //     case "interactive":
+  //       console.log("document.readyState: ", document.readyState, 
+  //         `- The document has finished loading DOM. `,
+  //         `- "DOMContentLoaded" event`
+  //         );
+  //       break;
+  //     case "complete":
+  //       console.log("document.readyState: ", document.readyState, 
+  //         `- The page DOM with Sub-resources are now fully loaded. `,
+  //         `- "load" event`
+  //         );
+  //       break;
+  //   }
+  // });
 
-  $(window).on("resize", () => {
+  // $(window).on("resize", () => {
 
-    MakeThemASquare();
-  });
+  //   MakeThemASquare();
+  // });
 
 
 });
@@ -54,7 +58,19 @@ async function MakeThemASquare(){
     //This callback is used to account for a bug that doubles the square height
     setTimeout(() => {
       $(elem).height($(elem).width());
-    }, 300);
+      // Nested timeout so hopefullty the 
+      setTimeout(() => {
+        $(elem).height($(elem).width());
+      }, 100);
+      
+      setTimeout(() => {
+        $(elem).height($(elem).width());
+      }, 175);
+      setTimeout(() => {
+        $(elem).height($(elem).width());
+      }, 225);
+    }, 50);
+    
 
   });
   
