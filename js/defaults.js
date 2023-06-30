@@ -6,7 +6,7 @@ Description: Procedurally incluses the css pages. To be included, each dependant
 
 */
 
-let sites = ["About Me", "Contact Me"];
+let sites = ["About Me", "Contact Me", "Projects"];
 let darkTheme = false;
 
 console.log(pagename + " worked");
