@@ -6,7 +6,7 @@ Description: Procedurally incluses the css pages. To be included, each dependant
 
 */
 
-let sites = ["About Me", "Contact Me", "Projects"];
+let sites = ["About Me", "Projects", "Contact Me"];
 let darkTheme = false;
 
 
@@ -15,7 +15,7 @@ $(() => {
 
   getTheme();
 
-  AddIncludes();
+  // AddIncludes();
 
 
   AddHeader();
@@ -33,17 +33,18 @@ function AddIncludes()
   // Adds the link for bootstrap and the link to the bootstrap javascript
   bootstrap = `<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">`;
+  head = $('link[href="css/main_style.css"]').before(bootstrap);
   head = $('head').append(bootstrap);
 
   // Adds the default stylesheet
   // styleSh = $(CreateEl("link")).attr("rel", "stylesheet").attr("href", "css/main_style.css");
   styleSh = CreateEl("link", [["rel", "stylesheet"], ["href", "css/main_style.css"]]);
-  head.append(styleSh);
+  head.insertAfter(styleSh);
 
 
   // Adds the stylesheet that's specific to the current page
   styleSh = $(CreateEl("link")).attr("rel", "stylesheet").attr("href", "css/" + pagename + ".css");
-  head.append(styleSh);
+  head.insertAfter(styleSh);
 }
 
 
