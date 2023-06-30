@@ -43,7 +43,7 @@ function TempProj(){
     'title' : "This WebSite!",
     'img_link' : "#",
     'repo_link' : "https://github.com/johannashaw/johannashaw.github.io",
-    'desc' : "Designed to showcase me and my respective projects.",
+    'desc' : "Designed to showcase me and my respective projects and website design capabilities.",
     'type' : "Website",
     'languages' : "HTML, CSS, JavaScript"
   });
@@ -92,15 +92,19 @@ function DisplayProj(data){
     {
       elem = $(CreateEl("h3")).html(proj_dets['type']);
       titlecont.append(elem);
-      
+        
+      // append to project div
+      titlecont.append(CreateEl("hr"));
     }
     // append to project div
     spec_proj.append(titlecont);
 
+    
+
     // create description p
     if ('desc' in proj_dets)
     {
-      elem = $(CreateEl("p")).html(proj_dets['desc']);
+      elem = $(CreateEl("p")).html(proj_dets['desc']).addClass("desc");
 
       // append description to project div
       spec_proj.append(elem);

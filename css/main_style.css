@@ -139,6 +139,21 @@ aside > div{
   
 }
 
+button{
+  padding: min(2.5%, 10px);
+  border: none;
+  border-radius: 3px;
+  background-color: var(--contrast-smol);
+  color: var(--secondary);
+  transition: all  0.2s;
+}
+button:hover{  
+  filter: brightness(110%);
+}
+button:active{  
+  filter: brightness(90%);
+}
+
 /* 
 @media  screen and (min-width: 550px) {
   :root{
