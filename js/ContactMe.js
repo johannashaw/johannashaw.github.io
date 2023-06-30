@@ -1,5 +1,8 @@
+/*  Created by: Johanna Shaw
+*/
 
 
+// on load code
 $( () => {
   SetImgs();
 
@@ -9,7 +12,7 @@ $( () => {
       $("#email-addr").fadeIn(150);
 
   } ).on( "mouseleave", () => {
-    //fade in email address
+    //fade out email address
     if ($("#email-addr").css('display') != 'none')
       $("#email-addr").fadeOut(150);
   });
@@ -20,18 +23,22 @@ $( () => {
 
   });
   
-  $(".close").on("click", () => {
-    $(".alert").alert('close');
-  });
+
+  // // Listener for closing the bootstrap alerts
+  // $(".close").on("click", () => {
+  //   $(".alert").alert('close');
+  // });
 
 });
 
+// displays the copy success alert
 function DisplayCoppied()
 {
     alert("Copied");
   $('.alert-secondary').alert();
 }
 
+// displays the copy failure alert
 function DisplayError()
 {
   alert("Nope");

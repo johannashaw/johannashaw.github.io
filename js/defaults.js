@@ -9,11 +9,9 @@ Description: Procedurally incluses the css pages. To be included, each dependant
 let sites = ["About Me", "Contact Me", "Projects"];
 let darkTheme = false;
 
-console.log(pagename + " worked");
 
 //on load stuff
 $(() => {
-  console.log("in default.js");
 
   getTheme();
 
@@ -32,8 +30,6 @@ $(() => {
 // also adds stylesheet that is specific to current page (must be in css folder and have the same name as the current page)
 function AddIncludes()
 {
-  console.log(pagename);
-
   // Adds the link for bootstrap and the link to the bootstrap javascript
   bootstrap = `<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">`;
@@ -44,7 +40,6 @@ function AddIncludes()
   styleSh = CreateEl("link", [["rel", "stylesheet"], ["href", "css/main_style.css"]]);
   head.append(styleSh);
 
-  // console.log(styleSh);
 
   // Adds the stylesheet that's specific to the current page
   styleSh = $(CreateEl("link")).attr("rel", "stylesheet").attr("href", "css/" + pagename + ".css");
@@ -59,8 +54,6 @@ function AddHeader()
   // Add content to the header
   h1 = $(CreateEl("h1")).html($("title").html());
   heading.append($(CreateEl("header")).append(h1));
-
-  
 
 
   // add the navigation bar
@@ -112,18 +105,9 @@ function AddFooter()
 }
 
 
-// Sets darkTheme to true if a dark theme is used
+// Sets darkTheme to true if a dark theme is used, otherwise uses light theme
 function getTheme()
 {
-  // var stSheet = $("head > link[rel='stylesheet']");
-
-  // // sets the darkTheme bool to true if key work "dark is found in any of the style sheets" 
-  // for (var i = 0; i < stSheet.length; i++)
-  // {
-  //   if ($(stSheet[i]).attr("href").toLowerCase().includes("dark"))
-  //     darkTheme = true;
-  // }  
-
   darkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 }
@@ -142,24 +126,22 @@ function ThemeChanges()
     }
 }
 
+// // Returns a new element of a given type with any properties listed in props
+// // 'props' is a 2D array, first layer is the different properties to be added,
+// // second layer contains the property name[0] and the property value[1]
+// function CreateEl(type, props){
+//   elem = $(document.createElement(type));
 
+//   // Set properties to the element if any were passed
+//   if (Array.isArray(props))
+//   {
+//     props.forEach(propPair => {    
+//       // set the properties if given a valid pair
+//       if (Array.isArray(propPair) && propPair.length >= 2)
+//         elem.prop(propPair[0], propPair[1]);    
+//     });
+//   }
 
-// Cheating so that I have to write a little less code
-// props is a 
-function CreateEl(string, props){
-  elem = $(document.createElement(string));
-
-  // just return if props isn't an array 
-  // ie no properties to set
-  if (!Array.isArray(props))
-    return elem; 
-
-  props.forEach(propPair => {    
-    
-    if (Array.isArray(propPair) && propPair.length >= 2)
-      elem.prop(propPair[0], propPair[1]);    
-  });
-
-  return elem;
-}
+//   return elem;
+// }
 
