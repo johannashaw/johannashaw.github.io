@@ -1,0 +1,44 @@
+:root{
+  --grid-space: 5vw;
+}
+
+#projs-container{
+  display: grid;
+  gap: var(--grid-space);
+  padding: var(--grid-space);
+
+
+}
+
+.cs-proj{
+  background-color: var(--secondary);
+  border-radius: var(--grid-space);
+  border: 3px solid var(--compliment);
+  padding: var(--grid-space);
+
+  background-image: linear-gradient(var(--main-back) 30%, var(--secondary) );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+}
+
+.code-butt{
+  width: 100%;
+  padding: min(2.5%, 10px);
+  border: none;
+  border-radius: 3px;
+  background-color: var(--contrast-smol);
+  color: var(--secondary);
+  transition: all 0.2s;
+}
+
+.code-butt:hover{  
+  filter: brightness(110%);
+}
+
+
+@media  screen and (min-width: 550px) {  
+  .prog-langs > ul {
+    column-count: 2;
+  }
+}
