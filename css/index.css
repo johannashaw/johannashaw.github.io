@@ -135,20 +135,8 @@ a.square{
 }
 
 
-
-/* @media  screen and (min-width: 550px) and (max-width: 1000px) {
-    .link-Grid  {
-    grid-template-columns: repeat(2, 1fr) ;
-  }
-}
-
-@media  screen and (min-width: 1000px) {
-  .link-Grid  {  
-    grid-template-columns: repeat(4, 1fr) ;
-  }
-} */
-
-@media  screen and (min-width: 550px) {
+/* Medium sized screen, make the grid 2 columns */
+@media  screen and (min-width: 550px) and (max-width: 1000px) {
   :root{
     --lgrid-calc-font: calc( var(--lgrid-baseline-font) / 2);
   }
@@ -162,6 +150,37 @@ a.square{
   .square > div{
     height: calc((98vw - (var(--lgrid-padding) * 3)) / 2);
   }
+}
+
+/* Large sized screen, make grid 3 columns */
+@media  screen and (min-width: 1000px) {
+  :root{
+    --lgrid-calc-font: calc( var(--lgrid-baseline-font) / 3);
+  }
+  .link-Grid{    
+    
+    /* grid-template-columns: repeat(2, 1fr) ; */
+    grid-template-columns: repeat(3, calc((100vw - (var(--lgrid-padding) * 4)) / 3) ) ;
+    column-gap: var(--lgrid-padding);
+  }
+
+  .square > div{
+    height: calc((98vw - (var(--lgrid-padding) * 4)) / 3);
+  }
+}
+
+@media  screen and (min-width: 550px) {
+  /* :root{
+    --lgrid-calc-font: calc( var(--lgrid-baseline-font) / 2);
+  }
+  .link-Grid{    
+    grid-template-columns: repeat(2, calc((100vw - (var(--lgrid-padding) * 3)) / 2) ) ;
+    column-gap: var(--lgrid-padding);
+  }
+
+  .square > div{
+    height: calc((98vw - (var(--lgrid-padding) * 3)) / 2);
+  } */
 
   /* #intro > div{
     display: grid;
@@ -187,28 +206,3 @@ a.square{
 /* Okay I'm not adding this yet, but badic settup for button blur on hover
   Source:
     https://codepen.io/caesura/pen/RrWQKX */
-/* 
-
-  &#btn-1 {
-    &:before {
-      transition: all 0.3s ease;
-    }
-
-    &:hover:before {
-      -webkit-filter: blur($blur);
-      filter: blur($blur);
-    }
-  }
-  
-  &#btn-2 {
-    &:before {
-      transition: all 0.3s ease;
-      -webkit-filter: blur($blur);
-      filter: blur($blur);
-    }
-
-    &:hover:before {
-      -webkit-filter: blur(0);
-      filter: blur(0);
-    }
-  } */
