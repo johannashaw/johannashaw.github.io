@@ -163,23 +163,3 @@ function DisplayProj(data){
   // - limiting the number of project results per page 
   // - adding the image link to the background of the title
 
-
-
-// // Returns a new element of a given type with any properties listed in props
-// // 'props' is a 2D array, first layer is the different properties to be added,
-// // second layer contains the property name[0] and the property value[1]
-// function CreateEl(type, props){
-//   elem = $(document.createElement(type));
-
-//   // Set properties to the element if any were passed
-//   if (Array.isArray(props))
-//   {
-//     props.forEach(propPair => {    
-//       // set the properties if given a valid pair
-//       if (Array.isArray(propPair) && propPair.length >= 2)
-//         elem.prop(propPair[0], propPair[1]);    
-//     });
-//   }
-
-//   return elem;
-// }
