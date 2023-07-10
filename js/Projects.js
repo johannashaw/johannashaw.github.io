@@ -31,7 +31,7 @@ function TempProj(){
   projs.push({
     'title' : "Voltorb Game Embedded Device Recreation",
     'img_link' : "#",
-    'repo_link' : "https://github.com/johannashaw/Voltorb_game/tree/main/Game_v3/Game_v3",
+    'repo_link' : "https://github.com/johannashaw/Voltorb_game/tree/Project-Quick-View",
     'desc' : `Uses a 5x5 button matrix and an 64x128px OLED screen to recreate the Voltorb minigame from Pokemon Soul Silver. 
       For those who are unfamiliar with it, the gameplay is similar to that of minesweeper. The PCB was designed by me, and the 
       Code was designed and written by me unless otherwise specified.`,
@@ -46,6 +46,20 @@ function TempProj(){
     'desc' : "Designed to showcase me and my respective projects and website design capabilities.",
     'type' : "Website",
     'languages' : "HTML, CSS, JavaScript"
+  });
+
+  
+  projs.push({
+    'title' : "Serial Controlled Switch Board",
+    'img_link' : "#",
+    'repo_link' : "https://github.com/johannashaw/Serial-Controlled-Relay-Module",
+    'desc' : `The Arduino receives a command from your PC over a serial port to activate one of 8 relays on the attached relay module.
+              Each trigger command will keep relays on for a preset period of time, refered to as the delay. If a relay trigger command is 
+              sent while the relay is already on, delay time will be added to the remaining time the relay is supposed to stay on for. 
+              The User can rename relays and change the delay to anything from 0.1s to 25.5s using the DeviceSetup desktop app.
+              `,
+    'type' : "Embedded Device, GUI, .NET Core",
+    'languages' : "C#, C++"
   });
 
   DisplayProj(projs);
